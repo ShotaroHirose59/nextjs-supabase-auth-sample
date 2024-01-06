@@ -1,6 +1,6 @@
 'use client'
 
-import { Text, Select, NumberInput, NumberInputHandlers, Grid } from '@mantine/core';
+import { Text, Select, NumberInput, NumberInputHandlers, Grid, Button, Flex } from '@mantine/core';
 import { useRef } from 'react';
 
 const CalcPage = () => {
@@ -214,15 +214,19 @@ const CalcPage = () => {
               defaultValue={0}
             />
           </Grid.Col>
-          <Grid.Col span={{ base: 4, md: 6, lg: 3 }}>
+          <Grid.Col span={{ base: 2 }}>
             <NumberInput
-              label="宝具バフ%"
-              placeholder="Click the buttons"
+              label="宝具バフ"
+              placeholder=""
               handlersRef={handlersRef}
               step={5}
               min={10}
               max={500}
               defaultValue={0}
+              rightSection={'%'}
+              rightSectionPointerEvents="none"
+              type="tel"
+              // inputmode="decimal"
             />
           </Grid.Col>
         </Grid>
