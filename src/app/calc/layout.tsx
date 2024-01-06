@@ -9,7 +9,7 @@ import { createTheme, MantineProvider } from '@mantine/core';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <MantineProvider theme={{ colorScheme: 'dark' }}>
+    <MantineProvider>
       <main>{children}</main>
     </MantineProvider>
   )
