@@ -1,18 +1,12 @@
-import '@mantine/core/styles.css';
+// app/layout.tsx
+import { Providers } from '../providers'
 
-import { createTheme, MantineProvider } from '@mantine/core';
-
-// const theme = createTheme({
-//   /** Put your mantine theme override here */
-//   colorScheme: 'dark',
-// });
-
-const Layout = ({ children }: { children: React.ReactNode }) => {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode,
+}) {
   return (
-    <MantineProvider>
-      <main>{children}</main>
-    </MantineProvider>
+    <Providers>{children}</Providers>
   )
 }
-
-export default Layout
