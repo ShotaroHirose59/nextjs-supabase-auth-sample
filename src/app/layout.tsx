@@ -22,7 +22,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <MantineProvider>
           <div className="flex flex-col min-h-screen">
             <SupabaseListener />
-            <main className="flex-1 container max-w-screen-sm mx-auto px-1 py-5">{children}</main>
+            <main className="flex-1 container max-w-screen-lg mx-auto px-1 py-5">{children}</main>
 
             <footer className="py-5">
               <div className="text-center text-sm">

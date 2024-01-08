@@ -1,5 +1,7 @@
 // app/layout.tsx
 import { Providers } from '../providers'
+import { ColorModeScript } from '@chakra-ui/react'
+import theme from '../theme'
 
 export default function RootLayout({
   children,
@@ -7,6 +9,10 @@ export default function RootLayout({
   children: React.ReactNode,
 }) {
   return (
-    <Providers>{children}</Providers>
+
+    <Providers>
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+      {children}
+    </Providers>
   )
 }
